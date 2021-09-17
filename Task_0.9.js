@@ -6,12 +6,11 @@ function vowelDetection(input) {
         allVowels.push(input[i]);
       } 
     } 
-    var sortedVowels = allVowels.sort();
-    var singleVowels = [new Set(sortedVowels)];
     
-    console.log("Vowels: ");
-    console.log(singleVowels); /* I know that there is an easier way
-                                  I just could not figure out the easier way but this sort of works*/ 
-} 
+    var sortedVowels = allVowels.sort();
+    var singleVowels = new Set(sortedVowels);
+    console.log("Vowels: " + Array.from(singleVowels).join(', '));
+  } 
+  vowelDetection("Umuzi");
 
 
