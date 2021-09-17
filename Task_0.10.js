@@ -17,9 +17,11 @@ function commonChar(string1, string2) {
         }
       }
     }   
-  var singleCommonChar = [new Set(allCommonChar)]
-  console.log("Common Letters: ")
-  console.log(singleCommonChar);
-}  // Also aware there is probably a better way to do this, but this does kind of work.
+  var singleCommonChar = new Set(allCommonChar);
+  console.log("Common Letters: " + Array.from(singleCommonChar).join(', '));
+  
+}  
+
+commonChar("house" , "computers")
  
 
