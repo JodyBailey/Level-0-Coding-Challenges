@@ -1,11 +1,11 @@
 function areaOfTriangle(firstLength, secondLength, thirdLength) {
-    var semiPerimeter = 0.5 * (firstLength + secondLength + thirdLength);
-    var area = Math.sqrt(
-        semiPerimeter * 
-        (semiPerimeter - firstLength) *
-        (semiPerimeter - secondLength) *
-        (semiPerimeter - thirdLength)
-    );
-    return area;
+  const semiPerimeter = 0.5 * (firstLength + secondLength + thirdLength);
+  const area = Math.sqrt(
+    semiPerimeter *
+      (semiPerimeter - firstLength) *
+      (semiPerimeter - secondLength) *
+      (semiPerimeter - thirdLength)
+  );
+  return area;
 }
-
+console.log(areaOfTriangle(3, 5, 4));

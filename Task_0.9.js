@@ -1,16 +1,19 @@
 function vowelDetection(input) {
-    input = input.toLowerCase();
-    var allVowels = [];
-    for (var i = 0; i < input.length; i++) {
-      if (input[i] == "a" || input[i] == "e" || input[i] == "i" || input[i] == "o" || input[i] == "u") {
-        allVowels.push(input[i]);
-      } 
-    } 
-    
-    var sortedVowels = allVowels.sort();
-    var singleVowels = new Set(sortedVowels);
-    console.log("Vowels: " + Array.from(singleVowels).join(', '));
-  } 
-  vowelDetection("Umuzi");
+  const lowerCaseInput = input.toLowerCase();
+  const allVowels = [];
+  for (let i = 0; i < lowerCaseInput.length; i++) {
+    if (
+      lowerCaseInput[i] == "a" ||
+      lowerCaseInput[i] == "e" ||
+      lowerCaseInput[i] == "i" ||
+      lowerCaseInput[i] == "o" ||
+      lowerCaseInput[i] == "u"
+    ) {
+      allVowels.push(lowerCaseInput[i]);
+    }
+  }
 
-
+  const singleVowels = new Set(allVowels);
+  console.log(`Vowels: ${Array.from(singleVowels).join(", ")}`);
+}
+vowelDetection("Umuzi");
